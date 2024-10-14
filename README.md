@@ -1,5 +1,7 @@
 # Data Ingestion - TeoMeWhy Dataset - 17/06/2024
 
+Vídeo publicado no [Youtube](https://youtu.be/qC17Fro4F8E)
+
 ## Author
 Eliézer Zarpelão
 
