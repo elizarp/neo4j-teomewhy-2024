@@ -10,5 +10,5 @@ CALL (customer){
     WITH customer, listTransactions, ix WHERE ix > 0
     WITH customer, listTransactions[ix] as transaction, listTransactions[ix-1] as previous
     MERGE (previous)-[n:NEXT]->(transaction)
-    SET n.diffMs = duration.between(previous.transactionDate,transaction.transactionDate).milliseconds
+    SET n.diffMs = datetime(transaction.pedidoDataCriacao).epochMillis - datetime(previous.pedidoDataCriacao).epochMillis
 } IN TRANSACTIONS OF 10 ROWS
